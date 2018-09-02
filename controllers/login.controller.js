@@ -5,8 +5,8 @@ _this = this
 
 exports.getUserDetails = async function(req, res, next){
 
-    var username = req.query.username;
-    var password = req.query.password;
+    var username = req.body.username;
+    var password = req.body.password;
 
     console.log(username, password)
 

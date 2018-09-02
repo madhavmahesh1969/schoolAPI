@@ -1,4 +1,5 @@
 var Login = require('../models/login.model')
+var User = require('../models/user.model')
 
 _this = this
 
@@ -19,7 +20,9 @@ _this = this
 exports.getUserDetails = async function(username){
     try {
         //var ques = await Question.find({username})
-        return true;
+        var user = await User.find({userName:username});
+        console.log('user',  user);
+        return user;
     } catch (e) {
         throw Error('Error while Paginating Tasks')
     }
